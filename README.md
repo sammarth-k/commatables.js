@@ -17,10 +17,10 @@ html
 
                         
         <!--CSS Packages--> 
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sammarth-k/commatables.js/1.0.0/commastyles.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sammarth-k/commatables.js@1.0.0/commastyles.min.css">
         
         <!--JavaScript Packages-->
-        <script src="https://cdn.jsdelivr.net/gh/sammarth-k/commatables.js/1.0.0/commatables.min.js"></script> 
+        <script src="https://cdn.jsdelivr.net/gh/sammarth-k/commatables.js@1.0.0/commatables.min.js"></script> 
         <!--You only need to add this if you want to use csv/txt files-->           
         <script src="https://cdn.jsdelivr.net/gh/jquery/jquery@3.2.1/dist/jquery.min.js"></script>     
       
