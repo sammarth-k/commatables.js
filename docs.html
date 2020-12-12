@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>commatables.js | Docs</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="dist/commastyles.css">
+    <link href="fa/css/all.css" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/apple-touch-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon-180x180.png" />
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="highlight/styles/atom-one-light.css">
+    <script src="highlight/highlight.pack.js"></script>
+    <meta name="author" content="Sammarth Kumar">
+    <link href="https://cdn.bootcss.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" rel="stylesheet">
+    <link media="mediatype and (min-width:800px)" href="https://cdn.bootcss.com/tether/1.2.0/css/tether.min.css"
+        rel="stylesheet">
+    <link media="mediatype and (min-width:800px)"
+        href="https://cdn.bootcss.com/tether/1.2.0/css/tether-theme-basic.min.css" rel="stylesheet">
+    <style>
+        .name {
+            position: absolute;
+            right: 15.5px;
+            font-weight: bold;
+            background: #c8c6c6;
+            padding: 3px;
+            font-size: 0.8rem;
+            font-family: consolas;
+            z-index: 1;
+            margin-top: 10px;
+        }
+
+        body {
+            position: relative;
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+
+        .sticky {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 180px;
+        }
+
+        .topnav {
+            z-index: 999;
+        }
+
+        @media screen and (max-width:800px) {
+            #scroll {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+
+<body data-spy="scroll" data-target="#navbar-example" data-offset="150">
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+    <div class="topnav" id="myTopnav">
+        <a href="index"><img width="38rem" height="auto" src="assets/logo.png"></a>
+        <div id="links">
+            <a onclick="toggle();"><i id="toggle" class="fas fa-sun" aria-hidden="true"></i></a>
+            <a href="https://github.com/sammarth-k/commatables.js"><i class="fab fa-github" aria-hidden="true"></i></a>
+            <a href="docs">Docs</a>
+            <a href="about">About</a>
+            <link href="https://cdn.jsdelivr.net/gh/sammarth-k/tag.css/tag.css" rel="stylesheet">
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div id="scroll" class="col-md-3 sticky">
+                <ul class="nav nav-pills nav-stacked" id="navbar-example">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#article1">Download</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#article2">Link2</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#article3">Link3</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#article4">Link4</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#article5">Link5</a>
+                    </li>
+                </ul>
+            </div>
+            <div align="center">
+                <img style="margin-top:150px" src="assets/banner.png" width="38%"
+                    class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}"
+                    alt=""><br>
+                <h2>Docs</h2>
+            </div>
+            <div id="body" class="col-md-9">
+
+                <h4 id="article1">Downloading commatables.js</h4>
+                <p></p>
+                <h5>Method 1: CDN</h5>
+
+                <p class="name">HTML</p>
+                <pre>
+                    <code>
+    &lt;!--CSS Packages--&gt; 
+    &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sammarth-k/commatables.js/1.0.0/commastyles.min.css"&gt;
+    
+    &lt;!--JavaScript Packages--&gt;
+    &lt;script src="https://cdn.jsdelivr.net/gh/sammarth-k/commatables.js/1.0.0/commatables.min.js"&gt;&lt;/script&gt; 
+    &lt;!--You only need to add this if you want to use csv/txt files--&gt;           
+    &lt;script src="https://cdn.jsdelivr.net/gh/jquery/jquery@3.2.1/dist/jquery.min.js"&gt;&lt;/script&gt;     
+</code>  </pre>
+                </p>
+                <p>
+                    <h5>Method 2: Download Package via GitHub</h5>
+
+                    You can visit <a href="https://github.com/sammarth-k/commatables.js/releases">this page</a> to
+                    download a <code>.zip</code> or <code>tar.gz</code> file with the source code.
+                </p>
+                <hr>
+
+                <h4 id="article2">Usage</h4>
+                <p>
+                    To use commatables.js, you need to link the JavaScript and CSS file in your HTML document. To use
+                    the <code>csv2tab</code> feature you must add JQuery right below the <code>commatables.js</code>
+                    file. Make sure you do this step as it is shown here to prevent any error in generating tables.
+                    <p class="name">HTML</p>
+                    <pre>
+                        <code>
+    &lt;script src="path/commatables.js"&gt;&lt;/script&gt;
+    &lt;script src="path/jquery.js"&gt;&lt;/script&gt;
+                        </code>  </pre>
+                    Make sure you add this at the end of the document, before the <code>&lt;/body&gt;</code>
+                </p>
+                <p>
+                    At the beginning of your document, you want to add your stylesheet, as so:
+                    <p class="name">HTML</p>
+                    <pre>
+                        <code>
+    &lt;head&gt;
+    &lt;link rel="stylesheet" href="path/commastyles.css"&gt;
+    &lt;/head&gt;
+                        </code>  </pre>
+                </p>
+                <p>
+                    Next, inside the body you have to create a <code>&lt;div&gt;</code> with the class
+                    <code>commatable</code> (this class is essential for the script to find all your CommaTables).
+                    <p class="name">HTML</p>
+                    <pre class="html">
+                        <code>
+    &lt;div class="commatable"&gt;&lt;/div&gt;
+                        </code>  </pre>
+                </p>
+                <p>
+                    After that, you want to create your first table. To do so, you can use <b>",", ";" and "|"</b> as
+                    your delimiters for columns and go to the next line for a new row. Don't worry, whitespace on either
+                    ends of your rows or cells won't affect the output since the script removes all whitespace with the
+                    <code>trim()</code>.<br>
+                    Your CommaTable should be created as follows:
+
+
+                    <p class="name">HTML</p>
+                    <pre class="html">
+                        <code>
+    &lt;div class="commatable"&gt;
+        Header 1, Header 2, Header 3
+        Col 1, Col 2, Col 3
+        Col 1, Col 2, Col 3
+    &lt;/div&gt;
+                        </code>  </pre>
+                </p>
+                <p>
+                    The output will be as shown:
+                    <div>
+                        <table>
+                            <thead>
+                                <th>Header 1</th>
+                                <th>Header 2</th>
+                                <th>Header 3</th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Col 1</td>
+                                    <td>Col 2</td>
+                                    <td>Col 3</td>
+                                </tr>
+                                <tr>
+                                    <td>Col 1</td>
+                                    <td>Col 2</td>
+                                    <td>Col 3</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </p>
+                <p>
+                    Yikes, that doesn't look too good. Don't worry, we have a CSS library dedicated to commatables.js.
+                    In the next section, you will see how to create beatiful tables with responsive design.
+                </p>
+
+
+                <h4 id="article3">Using the CSS</h4>
+                <p>In this section, we will look at how to use the CSS library to make your CommaTables look amazing.
+                    All the examples used have been made using commatables.js and the commastyles CSS library.
+                </p>
+                <p>Let's start by looking at the default style we get when we use the library:</p>
+                <p class="name">HTML</p>
+                <pre class="html">
+                        <code>
+    &lt;div class="commatable"&gt;
+        Header 1, Header 2, Header 3
+        Col 1, Col 2, Col 3
+        Col 1, Col 2, Col 3
+    &lt;/div&gt;
+                        </code>  </pre>
+                </p>
+                <p>Output:</p>
+                <div class="commatable">
+                    Header 1, Header 2, Header 3
+                    Col 1, Col 2, Col 3
+                    Col1, Col 2, Col3
+                </div><br>
+                <p>
+                    Right away you see that our table now looks much cleaner. In fact, it's also responsive. In the
+                    following example, you can see how the table adapts to the given constraints.
+                </p>
+                <div class="commatable">
+                    Header 1, Header 2, Header 3, Header 4, Header 5, Header 6, Header 7, Header 8, Header 9, Header 10
+                    Col 1,Col 2, Col 3, Col 4, Col 5, Col 6, Col 7, Col 8, Col 9, Col 10
+                </div><br>
+                <p>
+                    You can try changing your window size to see how the table responds. You also don't worry about your
+                    text
+                    overflowing since whitespace is set to <code>nowrap</code> in the CSS.
+                </p>
+                <p>
+                    Let's now look at some of the different styles of tables we can create with the CSS Library. For
+                    these examples, we will be using the <code>coral</code> theme.
+                </p>
+                <h5>Adding Color to CommaTables</h5>
+                <p>
+                    To add colors and themes to your CommaTable, you need to specify the theme name as a class of the
+                    <code>div</code> your CommaTable is being generated in.
+                </p>
+                <p class="name">HTML</p>
+                <pre class="html">
+                        <code>
+    &lt;div class="commatable coral"&gt;
+        Header 1, Header 2, Header 3
+        Col 1, Col 2, Col 3
+        Col 1, Col 2, Col 3
+    &lt;/div&gt;
+                        </code>  </pre>
+                </p>
+                <p>
+                    Output:
+                </p>
+                <div class="commatable coral">
+                    Header 1, Header 2, Header 3
+                    Col 1, Col 2, Col 3
+                    Col 1, Col 2, Col 3
+                </div><br>
+                <p>
+                    That definitely looks much better, but that's not all we can do!
+                </p>
+                <h5>Borders</h5>
+                <p>
+                    You can add borders to your table using the <code>bordered</code> class. This avoids any conflict
+                    with the Bootstrap <code>border</code> class.
+                </p>
+                <p class="name">HTML</p>
+                <pre class="html">
+                        <code>
+    &lt;div class="commatable coral bordered"&gt;
+        Header 1, Header 2, Header 3
+        Col 1, Col 2, Col 3
+        Col 1, Col 2, Col 3
+    &lt;/div&gt;
+                        </code>  </pre>
+                </p>
+                <p>
+                    Output:
+                </p>
+                <div class="commatable coral bordered">
+                    Header 1, Header 2, Header 3
+                    Col 1, Col 2, Col 3
+                    Col 1, Col 2, Col 3
+                </div><br>
+                <h5>Columns</h5>
+                <p>
+                    Next, we are going to add columns to the table:
+                </p>
+                <p class="name">HTML</p>
+                <pre class="html">
+                        <code>
+    &lt;div class="commatable coral bordered columns"&gt;
+        Header 1, Header 2, Header 3
+        Col 1, Col 2, Col 3
+        Col 1, Col 2, Col 3
+    &lt;/div&gt;
+                        </code>  </pre>
+                </p>
+                <p>
+                    Output:
+                </p>
+                <div class="commatable coral bordered columns">
+                    Header 1, Header 2, Header 3
+                    Col 1, Col 2, Col 3
+                    Col 1, Col 2, Col 3
+                </div><br>
+                <h5>Stripes</h5>
+                <p>
+                    One of the best table styles is the <code>striped</code> style wherein you have the theme color as
+                    your header background and a slightly lighter shade of it as your stripes.
+                </p>
+                <p class="name">HTML</p>
+                <pre class="html">
+                        <code>
+    &lt;div class="commatable coral striped"&gt;
+        Header 1, Header 2, Header 3
+        Col 1, Col 2, Col 3
+        Col 1, Col 2, Col 3
+        Col 1, Col 2, Col 3
+        Col 1, Col 2, Col 3
+    &lt;/div&gt;
+                        </code>  </pre>
+                </p>
+                <p>
+                    Output:
+                </p>
+                <div class="commatable coral striped">
+                    Header 1, Header 2, Header 3
+                    Col 1, Col 2, Col 3
+                    Col 1, Col 2, Col 3
+                    Col 1, Col 2, Col 3
+                    Col 1, Col 2, Col 3
+                </div><br>
+
+
+
+                <h4 id="article4">Article4</h4>
+                <p>In incididunt echo park, officia deserunt mcsweeney's proident master cleanse thundercats
+                    sapiente
+                    veniam. Excepteur VHS elit, proident shoreditch +1 biodiesel laborum craft beer. Single-origin
+                    coffee
+                    wayfarers irure four loko, cupidatat terry richardson master cleanse. Assumenda you probably
+                    haven't
+                    heard of them art party fanny pack, tattooed nulla cardigan tempor ad. Proident wolf nesciunt
+                    sartorial
+                    keffiyeh eu banh mi sustainable. Elit wolf voluptate, lo-fi ea portland before they sold out
+                    four
+                    loko.
+                    Locavore enim nostrud mlkshk brooklyn nesciunt.</p>
+                <h4 id="article5">Article5</h4>
+                <p>Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold
+                    out
+                    qui.
+                    Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan
+                    mcsweeney's
+                    photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie minim qui you
+                    probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson aesthetic.
+                    Nihil
+                    tattooed accusamus, cred irony biodiesel keffiyeh artisan ullamco consequat.</p>
+                <p>Keytar twee blog, culpa messenger bag marfa whatever delectus food truck. Sapiente synth id
+                    assumenda.
+                    Locavore sed helvetica cliche irony, thundercats you probably haven't heard of them consequat
+                    hoodie
+                    gluten-free lo-fi fap aliquip. Labore elit placeat before they sold out, terry richardson
+                    proident
+                    brunch nesciunt quis cosby sweater pariatur keffiyeh ut helvetica artisan. Cardigan craft beer
+                    seitan
+                    readymade velit. VHS chambray laboris tempor veniam. Anim mollit minim commodo ullamco
+                    thundercats.
+                </p>
+                <p>Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold
+                    out
+                    qui.
+                    Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan
+                    mcsweeney's
+                    photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie minim qui you
+                    probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson aesthetic.
+                    Nihil
+                    tattooed accusamus, cred irony biodiesel keffiyeh artisan ullamco consequat.</p>
+                <p>Keytar twee blog, culpa messenger bag marfa whatever delectus food truck. Sapiente synth id
+                    assumenda.
+                    Locavore sed helvetica cliche irony, thundercats you probably haven't heard of them consequat
+                    hoodie
+                    gluten-free lo-fi fap aliquip. Labore elit placeat before they sold out, terry richardson
+                    proident
+                    brunch nesciunt quis cosby sweater pariatur keffiyeh ut helvetica artisan. Cardigan craft beer
+                    seitan
+                    readymade velit. VHS chambray laboris tempor veniam. Anim mollit minim commodo ullamco
+                    thundercats.
+                </p>
+                <p>Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold
+                    out
+                    qui.
+                    Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan
+                    mcsweeney's
+                    photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie minim qui you
+                    probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson aesthetic.
+                    Nihil
+                    tattooed accusamus, cred irony biodiesel keffiyeh artisan ullamco consequat.</p>
+                <p>Keytar twee blog, culpa messenger bag marfa whatever delectus food truck. Sapiente synth id
+                    assumenda.
+                    Locavore sed helvetica cliche irony, thundercats you probably haven't heard of them consequat
+                    hoodie
+                    gluten-free lo-fi fap aliquip. Labore elit placeat before they sold out, terry richardson
+                    proident
+                    brunch nesciunt quis cosby sweater pariatur keffiyeh ut helvetica artisan. Cardigan craft beer
+                    seitan
+                    readymade velit. VHS chambray laboris tempor veniam. Anim mollit minim commodo ullamco
+                    thundercats.
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- JavaScripts -->
+    <script src="script.js"></script>
+    <script src="commatables.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/2.2.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/tether/1.2.0/js/tether.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.bootcss.com/holder/2.9.3/holder.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stickyfill/1.1.4/stickyfill.min.js"></script>
+    <script>
+        $('.sticky').Stickyfill();
+    </script>
+</body>
+
+</html>

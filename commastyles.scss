@@ -1,0 +1,68 @@
+$themes: (
+  (coral, #f66079, #ff8196),
+  (turq, #18c2c2, #13caca),
+  (green, #00db8b, #2ceaa3),
+  (apricot,#fdb98b,#fbceb1),
+  (violet,rgb(182, 6, 182),rgb(228, 101, 228)),
+  (blue,rgb(0, 110, 255),rgb(71, 151, 255))
+);
+.ct-scroll {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  white-space: nowrap;
+}
+.commatable {
+  thead th {
+    padding: 0.3rem 0.7rem 0.3rem 0.7rem;
+  }
+  td {
+    padding: 0.7rem;
+  }
+  tr {
+    border-bottom: 1px solid #323330;
+  }
+}
+
+@each $theme in $themes {
+  $name: nth($theme, 1);
+  $light: nth($theme, 3);
+  $themecol: nth($theme, 2);
+
+  .#{$name} {
+    color: inherit;
+    background: inherit;
+    &.bordered tr {
+      border: 1px solid $themecol;
+    }
+    &.columns td,
+    th {
+      border-left: 1px solid $themecol;
+      border-right: 1px solid $themecol;
+    }
+    thead {
+      background: $themecol;
+      color: white;
+    }
+
+    tr {
+      border-bottom: 1px solid $themecol;
+    }
+    &.striped {
+      &.bordered tr {
+        border: 1px solid $themecol;
+      }
+      th {
+        color: #f7f7f7;
+      }
+      tr {
+        border: none;
+        color: $themecol;
+      }
+      tr:nth-child(even) {
+        background: $light;
+        color: white;
+      }
+    }
+  }
+}
